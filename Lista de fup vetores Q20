@@ -1,0 +1,31 @@
+#include <stdio.h>
+int main()
+{
+    int n;
+    printf("DIgite valor de n\n");
+    scanf("%d", &n);
+    int nn[n];
+    for(int i=0;i<n;i++) {
+        printf("Digite um numero: \n");
+        scanf("%d", &nn[i]);
+    }
+    int nnn[n][n];
+    for(int i=0;i<n;i++) {
+        for(int x=0;x<n;x++) {
+            if(i==x) {
+                nnn[i][x] = nn[i];
+            }
+            if(i!=x) {
+                nnn[i][x] = 0;
+            }
+        }
+    }
+    
+    for(int i=0;i<n;i++) {
+        for(int x=0;x<n;x++)  {
+            printf("%d\t", nnn[i][x]);
+        }
+        printf("\n");
+    }
+    return 0;
+}
